@@ -11,7 +11,7 @@ public class HookBehav : MonoBehaviour
     [SerializeField] GameObject m_jib;
     [SerializeField] GameObject m_trolley;
     [SerializeField] GameObject m_hook;
-    ConfigurableJoint m_JointForObject;
+    public ConfigurableJoint m_JointForObject;
     [SerializeField] LineRenderer m_Cable;
     [SerializeField] LineRenderer m_Cable2;
 
@@ -138,15 +138,15 @@ public class HookBehav : MonoBehaviour
                 m_trolley.transform.localPosition = new_Pos;
             }
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.D))
         {
             m_jib.transform.Rotate(0, 0, rotation_speed * Time.fixedDeltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.A))
         {
             m_jib.transform.Rotate(0, 0, -rotation_speed * Time.fixedDeltaTime);
         }
-        else if (Input.GetKey(KeyCode.Q))
+        else if (Input.GetKey(KeyCode.E))
         {
             Vector3 currenthook_Pos = m_hook.transform.localPosition;
             float currenthook_Posz = m_hook.transform.localPosition.z;
@@ -158,7 +158,7 @@ public class HookBehav : MonoBehaviour
                 m_hook.transform.localPosition = new_Pos;
             }
         }
-        else if (Input.GetKey(KeyCode.E))
+        else if (Input.GetKey(KeyCode.Q))
         {
             Vector3 currenthook_Pos = m_hook.transform.localPosition;
             float currenthook_Posz = m_hook.transform.localPosition.z;

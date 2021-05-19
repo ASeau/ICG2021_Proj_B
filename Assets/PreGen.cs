@@ -11,7 +11,7 @@ public class PreGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenPre(m_CubePrefab, Random.Range(25, 50));
+        GenPre(m_CubePrefab, Random.Range(5, 10));
         
         // GenPre(m_SpherePrefab, Random.Range(5, 10));
     }
