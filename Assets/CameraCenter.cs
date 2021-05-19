@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraCenter : MonoBehaviour
 {
-    [SerializeField] Camera[] m_Cameras = new Camera[2];
+    [SerializeField] Camera[] m_Cameras = new Camera[3];
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))

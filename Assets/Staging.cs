@@ -16,4 +16,14 @@ public class Staging : MonoBehaviour
             Debug.Log("item placed");
         }
     }
+    
+    void OnTriggerStay(Collider other)
+    {
+
+        MeshRenderer renderer = other.GetComponent<MeshRenderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = Color.green;
+        }
+    }
 }
